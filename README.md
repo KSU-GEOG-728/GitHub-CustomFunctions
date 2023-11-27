@@ -7,7 +7,7 @@ Accept the GitHub Classroom assignment <code>GitHub-CustomFunctions</code> and c
 
 ### Task:
 
-Edit the provided Python file <code>CalculateNdwi.py</code> Write a create a custom function in a module called <code>CalculateNdwi.py</code> to calculate NDWI for a Landsat 8 image. The function should be able to be called from another script AND run on its own.  Use your new module/function in a new script called <code>GitHub-CustomFunctions.py</code> that properly calculates the Normalized Difference Water Index (NDWI) from a Landsat 8 image and saves the result using a custom filename ending with "_NDWI".
+Write a create a custom function in a module called <code>CalculateNdwi.py</code> to calculate NDWI for a Landsat 8 image. The function should be able to be called from another script AND run on its own.  Use your new module/function in a new script called <code>GitHub-CustomFunctions.py</code> that properly calculates the Normalized Difference Water Index (NDWI) from a Landsat 8 image and saves the result using a custom filename ending with "_NDWI".
 
 ## Rubric:
 
