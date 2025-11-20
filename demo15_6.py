@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# !/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -47,4 +47,5 @@ except arcpy.ExecuteError:
 
 # Trap remaining errors	
 except Exception as e:
+
     print("General Error: {0}".format(str(e)))
