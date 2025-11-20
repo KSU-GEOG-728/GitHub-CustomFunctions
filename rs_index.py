@@ -1,19 +1,19 @@
-#!/usr/bin/env python
+# !/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
     File name: rs_index.py
     Author: Shawn Hutchinson
     Description:  Module with example function to calculate NDVI from Landsat 8 image
-    Date created: November 27, 2023
-    Python Version: 3.9.16
+    Date created: November 27, 2025
+    Python Version: 3.11.11
 """
 
 def ndvi(inLandsat8):  #after Rouse et al., 1974
     import arcpy
     arcpy.CheckOutExtension("Spatial")
-    num = arcpy.sa.Float(inLandsat8 + "\\Band_5") - arcpy.sa.Float(inLandsat8 + "\\Band_4")
-    denom = arcpy.sa.Float(inLandsat8 + "\\Band_5") + arcpy.sa.Float(inLandsat8 + "\\Band_4")
+    num = arcpy.sa.Float(inLandsat8 + "/Band_5") - arcpy.sa.Float(inLandsat8 + "/Band_4")
+    denom = arcpy.sa.Float(inLandsat8 + "/Band_5") + arcpy.sa.Float(inLandsat8 + "/Band_4")
     ndvi = arcpy.sa.Divide(num, denom)
     return ndvi
     arcpy.CheckInExtension("Spatial")

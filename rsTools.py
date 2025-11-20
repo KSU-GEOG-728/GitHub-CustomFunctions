@@ -1,12 +1,12 @@
-#!/usr/bin/env python
+# !/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
     File name: rs_index.py
     Author: Shawn Hutchinson
     Description:  Module with example custom class and function to calculate NDVI from Landsat OLI or TM sensors
-    Date created: November 27, 2023
-    Python Version: 3.9.16
+    Date created: November 27, 2025
+    Python Version: 3.11.11
 """
 
 class Landsat(object):
@@ -19,11 +19,11 @@ class Landsat(object):
         import arcpy
         arcpy.CheckOutExtension("Spatial")
         if self.sensorType == "OLI":
-            num = arcpy.sa.Float(self.rasterIn + "\\Band_5") - arcpy.sa.Float(self.rasterIn + "\\Band_4")
-            denom = arcpy.sa.Float(self.rasterIn + "\\Band_5") + arcpy.sa.Float(self.rasterIn + "\\Band_4")
+            num = arcpy.sa.Float(self.rasterIn + "/Band_5") - arcpy.sa.Float(self.rasterIn + "/Band_4")
+            denom = arcpy.sa.Float(self.rasterIn + "/Band_5") + arcpy.sa.Float(self.rasterIn + "/Band_4")
         else:
-            num = arcpy.sa.Float(self.rasterIn + "\\Band_4") - arcpy.sa.Float(self.rasterIn + "\\Band_3")
-            denom = arcpy.sa.Float(self.rasterIn + "\\Band_4") + arcpy.sa.Float(self.rasterIn + "\\Band_3")
+            num = arcpy.sa.Float(self.rasterIn + "/Band_4") - arcpy.sa.Float(self.rasterIn + "/Band_3")
+            denom = arcpy.sa.Float(self.rasterIn + "/Band_4") + arcpy.sa.Float(self.rasterIn + "/Band_3")
         ndvi = arcpy.sa.Divide(num, denom)
         return ndvi
         arcpy.CheckInExtension("Spatial")

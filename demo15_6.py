@@ -5,8 +5,8 @@
     File name: demo15_6.py
     Author: Shawn Hutchinson
     Description:  Example script for calling an external custom function
-    Date created: November 27, 2023
-    Python Version: 3.9.16
+    Date created: November 27, 2025
+    Python Version: 3.11.11
 """
 
 # Import required module(s)
@@ -40,6 +40,11 @@ try:
 	else:
 		print("Required Spatial Analyst extension is not available!")
 
+# Trap geoprocessing errors
 except arcpy.ExecuteError:
     # Print level 2 severity geoprocessing messages
     print(arcpy.GetMessages(2))
+
+# Trap remaining errors	
+except Exception as e:
+    print("General Error: {0}".format(str(e)))
