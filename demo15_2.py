@@ -5,7 +5,7 @@
     File name: demo15_2.py
     Author: Shawn Hutchinson
     Description:  Example script for listing fields in a table using an embedded function
-    Date created: November 27, 2025
+    Date created: December 1, 2025
     Python Version: 3.11.11
 """
 
@@ -21,7 +21,7 @@ def listFieldNames(table):
 import arcpy
 
 # Set environment(s)
-arcpy.env.workspace = "D:/GitHub/GitHub-Rasters/ExerciseData.gdb"
+arcpy.env.workspace = r"D:\Teaching\GEOG728_Projects\GitHub-Rasters\GitHub-Rasters\ExerciseData.gdb"
 
 # Create a list of names of string fields in a table or feature class
 fieldNames = listFieldNames("KonzaTreatments") 

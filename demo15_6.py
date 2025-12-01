@@ -5,7 +5,7 @@
     File name: demo15_6.py
     Author: Shawn Hutchinson
     Description:  Example script for calling an external custom function
-    Date created: November 27, 2025
+    Date created: December 1, 2025
     Python Version: 3.11.11
 """
 
@@ -14,10 +14,10 @@ import arcpy, os, rs_index
 
 # Define local variable(s)
 inputGrid = "LANDSAT8_20160510"     ##Choices:  "LANDSAT8_20150609" "LANDSAT8_20160510" "LANDSAT8_20170513"
-inputWorkspace = "D:/GitHub/GitHub-Rasters/ExerciseData.gdb"
-outputWorkspace = "D:/GitHub/GitHub-Rasters/scratch.gdb"
+inputWorkspace = r"D:\Teaching\GEOG728_Projects\GitHub-Rasters\GitHub-Rasters\ExerciseData.gdb"
+outputWorkspace = r"D:\Teaching\GEOG728_Projects\GitHub-Rasters\GitHub-Rasters\scratch.gdb"
 
-# Set environment(s)
+#Set environment(s)
 arcpy.env.workspace = inputWorkspace
 arcpy.env.overwriteOutput = True
 
@@ -40,12 +40,6 @@ try:
 	else:
 		print("Required Spatial Analyst extension is not available!")
 
-# Trap geoprocessing errors
 except arcpy.ExecuteError:
     # Print level 2 severity geoprocessing messages
     print(arcpy.GetMessages(2))
-
-# Trap remaining errors	
-except Exception as e:
-
-    print("General Error: {0}".format(str(e)))
